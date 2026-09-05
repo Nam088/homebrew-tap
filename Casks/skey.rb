@@ -1,8 +1,10 @@
 cask "skey" do
-  version "1.0.19"
-  sha256 "c20b44a447158426f00beb4111bb61e8591654f18bdb56fee5584e24ce3bd5e4"
+  version "1.0.12"
+  sha256 "88d04c40b8efbaf37d888d7c50ed6d7edf551960fcaa5f30d6d50ece110c4276"
 
-  url "https://github.com/Nam088/skey/releases/download/v#{version}/SKey-Installer.dmg"
+  # Release tags are platform prefixed (mac-v1.0.10). The previous "v#{version}" form
+  # pointed at tags that have never existed, so every brew install fetched a 404.
+  url "https://github.com/Nam088/skey/releases/download/mac-v#{version}/SKey-Installer.dmg"
   name "SKey"
   desc "Modern, high-performance Vietnamese input engine and utilities"
   homepage "https://github.com/Nam088/skey"
